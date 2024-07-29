@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+*::selection {
+    background-color: transparent;
+    color: #FD7E14;
+}
+
+.toggle {
+    background-color: transparent;
+    border:none;
+}
+
+.calc-parent {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: white;
+    width: 300px;
+    height: 520px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0.1px  1.95px 1.95px 2.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #747474;
+    border-radius: 10px;
+}
+
+nav ul {
+    height: 60px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.nav ul li {
+    object-fit: cover;
+}
+
+nav ul li:first-child {
+    width: 30px;
+    height: 15px;
+    position: relative;
+}
+
+nav ul li:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20px;
+    background-color: #747474;
+    height: 2px;
+}
+
+span {
+    position: absolute;
+    top: 45%;
+    width: 20px;
+    background-color: #747474;
+    height: 2px;
+}
+
+nav ul li:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    background-color: #747474;
+    height: 2px;
+}
+
+.calc__btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+    box-shadow: 1px 1px 4px grey;
+    color: #747474;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calc__btn:hover, .toggle:hover {
+    scale: 1.1;
+}
+
+.calc__btn:active, .toggle:active {
+    scale:1;
+}
+
+.calc__btn img {
+    object-fit: cover;
+    width: 20px;
+    height: 20px;
+}
+
+.input__box {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.input__box input {
+    height: 40px;
+    outline: none;
+    text-align:end;
+    padding: 0 10px;
+    color: #747474;
+    border:none;
+}
+
+.keyboard {
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.keyboard__column {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+
+.keyboard__top ,  .keyboard__right {
+    box-shadow: 1px 1px 4px grey;
+    border-radius:50px;
+}
+
+.keyboard__top button, .keyboard__right button {
+    color: #FD7E14;
+}
+
+.keyboard__right {
+    width: 55px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+
+.keyboard__top {
+    width: 180px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+}
+
+.keyboard__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:5px;
+}
+
+.keyboard__right button:last-child {
+    background-color: #FD7E14;
+    color: #fff;
+}
